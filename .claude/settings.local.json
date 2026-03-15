@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go mod:*)",
+      "Bash(go build:*)",
+      "Bash(./imgdup --help 2>&1)",
+      "Bash(BIN=/Users/hoangthinh/Data/Learning/image-dupl-detector/imgdup __NEW_LINE_6b912134b29ba2d4__ echo \"=== TC-01: --help ===\" $BIN --help)",
+      "Read(//Users/hoangthinh/Data/Learning/image-dupl-detector/**)",
+      "Bash(1 __NEW_LINE_6b912134b29ba2d4__ echo \"\" echo \"=== TC-03: Non-existent folder ===\" $BIN -f /nonexistent/path/xyz)",
+      "Bash(echo \"Exit: $?\" __NEW_LINE_6b912134b29ba2d4__ echo \"\" echo \"=== TC-04: File instead of folder ===\" $BIN -f /etc/hosts)",
+      "Bash(echo \"Exit: $?\" __NEW_LINE_6b912134b29ba2d4__ echo \"\" echo \"=== TC-05: Empty folder ===\" $BIN -f /tmp/imgdup-test/empty_folder)",
+      "Bash(echo \"Exit: $?\" __NEW_LINE_6b912134b29ba2d4__ echo \"\" echo \"=== TC-06: Similarity too high ===\" $BIN -f /tmp/imgdup-test -s 101)",
+      "Bash(echo \"Exit: $?\" __NEW_LINE_6b912134b29ba2d4__ echo \"\" echo \"=== TC-07: Similarity zero ===\" $BIN -f /tmp/imgdup-test -s 0)",
+      "Bash(echo \"Exit: $?\" __NEW_LINE_6b912134b29ba2d4__ echo \"\" echo \"=== TC-08: Similarity string ===\" $BIN -f /tmp/imgdup-test -s abc)",
+      "Bash(echo \"Exit: $?\")"
+    ]
+  }
+}
